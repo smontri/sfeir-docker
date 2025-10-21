@@ -2,7 +2,7 @@
 
 FROM demonstrationorg/dhi-node:24.10.0-dev AS build-stage
 
-ENV NODE_ENV=production
+ENV NODE_ENV=build
 WORKDIR /usr/src/app
 RUN --mount=type=bind,source=package.json,target=package.json \
     --mount=type=bind,source=package-lock.json,target=package-lock.json \
